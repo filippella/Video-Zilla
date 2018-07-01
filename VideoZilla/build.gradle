@@ -1,0 +1,16 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //Rest
+    implementation "com.squareup.retrofit2:retrofit:${retrofitVersion}"
+    implementation "com.squareup.retrofit2:converter-gson:${retrofitConverterVersion}"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:${retrofitConverterVersion}"
+
+    //Reactive Libs
+    implementation "io.reactivex.rxjava2:rxjava:${rxJavaVersion}"
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
